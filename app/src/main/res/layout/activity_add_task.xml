@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AddTaskActivity">
+
+    <EditText
+        android:id="@+id/etTodo"
+        android:layout_width="327dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
+        android:ems="25"
+        android:hint="@string/name_of_the_task_to_do"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etToAccomplish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <EditText
+        android:id="@+id/etToAccomplish"
+        android:layout_width="330dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/to_finish_when"
+        android:inputType="textPersonName"
+        android:maxLength="100"
+        app:layout_constraintBottom_toTopOf="@+id/etDescription"
+        app:layout_constraintEnd_toEndOf="@+id/etTodo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etTodo" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="332dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="@string/describe_the_task"
+        android:inputType="textPersonName"
+        android:maxLength="100"
+        app:layout_constraintBottom_toTopOf="@+id/buttonOk"
+        app:layout_constraintEnd_toEndOf="@+id/etToAccomplish"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etToAccomplish" />
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etDescription"
+        app:layout_constraintStart_toStartOf="@+id/etDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
